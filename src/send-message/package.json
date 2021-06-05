@@ -1,0 +1,10 @@
+{
+  "name": "send-message",
+  "version": "1.0.0",
+  "dependencies": {
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "@types/shortid": "0.0.29"
+  }
+}

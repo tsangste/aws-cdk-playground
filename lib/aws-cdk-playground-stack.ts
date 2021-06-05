@@ -22,6 +22,7 @@ export class AwsCdkPlaygroundStack extends cdk.Stack {
     const messages = new dynamodb.Table(this, 'messagesTable', {
       tableName: 'messagesTable',
       partitionKey: { name: 'connectionId', type: dynamodb.AttributeType.STRING },
+      sortKey: { name: 'messageId', type: dynamodb.AttributeType.STRING },
       stream: dynamodb.StreamViewType.NEW_AND_OLD_IMAGES,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
     })
