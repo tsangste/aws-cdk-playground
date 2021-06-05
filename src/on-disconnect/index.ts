@@ -14,7 +14,7 @@ export async function handle(event: APIGatewayProxyEvent): Promise<APIGatewayPro
     Key: {
       connectionId: event.requestContext.connectionId
     }
-  };
+  }
 
   try {
     await ddb.delete(deleteParams).promise()
