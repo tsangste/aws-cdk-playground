@@ -1,0 +1,956 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Creates Stack 1`] = `
+Object {
+  "Parameters": Object {
+    "AssetParameters28e6c6a66c30e18f3ac1cb08b8183c5554b925c71ecf1faa90427bc0c4b6a30eArtifactHash3666374E": Object {
+      "Description": "Artifact hash for asset \\"28e6c6a66c30e18f3ac1cb08b8183c5554b925c71ecf1faa90427bc0c4b6a30e\\"",
+      "Type": "String",
+    },
+    "AssetParameters28e6c6a66c30e18f3ac1cb08b8183c5554b925c71ecf1faa90427bc0c4b6a30eS3BucketE35FF0CA": Object {
+      "Description": "S3 bucket for asset \\"28e6c6a66c30e18f3ac1cb08b8183c5554b925c71ecf1faa90427bc0c4b6a30e\\"",
+      "Type": "String",
+    },
+    "AssetParameters28e6c6a66c30e18f3ac1cb08b8183c5554b925c71ecf1faa90427bc0c4b6a30eS3VersionKeyB5774F3A": Object {
+      "Description": "S3 key for asset version \\"28e6c6a66c30e18f3ac1cb08b8183c5554b925c71ecf1faa90427bc0c4b6a30e\\"",
+      "Type": "String",
+    },
+    "AssetParameters4d9dbfbd7b0759d9ffdb8990f1bbd48a1901a8f29be3db266217d2a3ad72d669ArtifactHash703742B3": Object {
+      "Description": "Artifact hash for asset \\"4d9dbfbd7b0759d9ffdb8990f1bbd48a1901a8f29be3db266217d2a3ad72d669\\"",
+      "Type": "String",
+    },
+    "AssetParameters4d9dbfbd7b0759d9ffdb8990f1bbd48a1901a8f29be3db266217d2a3ad72d669S3Bucket98333ACA": Object {
+      "Description": "S3 bucket for asset \\"4d9dbfbd7b0759d9ffdb8990f1bbd48a1901a8f29be3db266217d2a3ad72d669\\"",
+      "Type": "String",
+    },
+    "AssetParameters4d9dbfbd7b0759d9ffdb8990f1bbd48a1901a8f29be3db266217d2a3ad72d669S3VersionKey0DA2E5A5": Object {
+      "Description": "S3 key for asset version \\"4d9dbfbd7b0759d9ffdb8990f1bbd48a1901a8f29be3db266217d2a3ad72d669\\"",
+      "Type": "String",
+    },
+    "AssetParameters7dbbb81ea482fb182c61f3bea7e90373c9d64c9f808a2fbcb968b6d57c407eeaArtifactHash5B599365": Object {
+      "Description": "Artifact hash for asset \\"7dbbb81ea482fb182c61f3bea7e90373c9d64c9f808a2fbcb968b6d57c407eea\\"",
+      "Type": "String",
+    },
+    "AssetParameters7dbbb81ea482fb182c61f3bea7e90373c9d64c9f808a2fbcb968b6d57c407eeaS3Bucket97C86D21": Object {
+      "Description": "S3 bucket for asset \\"7dbbb81ea482fb182c61f3bea7e90373c9d64c9f808a2fbcb968b6d57c407eea\\"",
+      "Type": "String",
+    },
+    "AssetParameters7dbbb81ea482fb182c61f3bea7e90373c9d64c9f808a2fbcb968b6d57c407eeaS3VersionKey0C73AE07": Object {
+      "Description": "S3 key for asset version \\"7dbbb81ea482fb182c61f3bea7e90373c9d64c9f808a2fbcb968b6d57c407eea\\"",
+      "Type": "String",
+    },
+    "AssetParameterscd7c5ecac63c1a014f3be94a5385cedc5b64f59866a3650898bf3cba43eacd55ArtifactHash8136B766": Object {
+      "Description": "Artifact hash for asset \\"cd7c5ecac63c1a014f3be94a5385cedc5b64f59866a3650898bf3cba43eacd55\\"",
+      "Type": "String",
+    },
+    "AssetParameterscd7c5ecac63c1a014f3be94a5385cedc5b64f59866a3650898bf3cba43eacd55S3BucketD4395DAD": Object {
+      "Description": "S3 bucket for asset \\"cd7c5ecac63c1a014f3be94a5385cedc5b64f59866a3650898bf3cba43eacd55\\"",
+      "Type": "String",
+    },
+    "AssetParameterscd7c5ecac63c1a014f3be94a5385cedc5b64f59866a3650898bf3cba43eacd55S3VersionKeyF166761D": Object {
+      "Description": "S3 key for asset version \\"cd7c5ecac63c1a014f3be94a5385cedc5b64f59866a3650898bf3cba43eacd55\\"",
+      "Type": "String",
+    },
+  },
+  "Resources": Object {
+    "connectionsTable7418640E": Object {
+      "DeletionPolicy": "Delete",
+      "Properties": Object {
+        "AttributeDefinitions": Array [
+          Object {
+            "AttributeName": "connectionId",
+            "AttributeType": "S",
+          },
+        ],
+        "KeySchema": Array [
+          Object {
+            "AttributeName": "connectionId",
+            "KeyType": "HASH",
+          },
+        ],
+        "ProvisionedThroughput": Object {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5,
+        },
+        "TableName": "connectionsTable",
+      },
+      "Type": "AWS::DynamoDB::Table",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "devF7B884FF": Object {
+      "Properties": Object {
+        "ApiId": Object {
+          "Ref": "socketgatewayBC596BF8",
+        },
+        "AutoDeploy": true,
+        "StageName": "dev",
+      },
+      "Type": "AWS::ApiGatewayV2::Stage",
+    },
+    "fanmessage09287453": Object {
+      "DependsOn": Array [
+        "fanmessageServiceRoleDefaultPolicy9AF4EAEE",
+        "fanmessageServiceRoleA9BBFC44",
+      ],
+      "Properties": Object {
+        "Code": Object {
+          "S3Bucket": Object {
+            "Ref": "AssetParameters7dbbb81ea482fb182c61f3bea7e90373c9d64c9f808a2fbcb968b6d57c407eeaS3Bucket97C86D21",
+          },
+          "S3Key": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                Object {
+                  "Fn::Select": Array [
+                    0,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameters7dbbb81ea482fb182c61f3bea7e90373c9d64c9f808a2fbcb968b6d57c407eeaS3VersionKey0C73AE07",
+                        },
+                      ],
+                    },
+                  ],
+                },
+                Object {
+                  "Fn::Select": Array [
+                    1,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameters7dbbb81ea482fb182c61f3bea7e90373c9d64c9f808a2fbcb968b6d57c407eeaS3VersionKey0C73AE07",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        },
+        "Environment": Object {
+          "Variables": Object {
+            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+            "TABLE_NAME": Object {
+              "Ref": "connectionsTable7418640E",
+            },
+          },
+        },
+        "Handler": "index.handle",
+        "Role": Object {
+          "Fn::GetAtt": Array [
+            "fanmessageServiceRoleA9BBFC44",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs14.x",
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "fanmessageDynamoDBEventSourceMyTestStackmessagesTable8AB4012170DD0982": Object {
+      "Properties": Object {
+        "BatchSize": 100,
+        "EventSourceArn": Object {
+          "Fn::GetAtt": Array [
+            "messagesTable7489632E",
+            "StreamArn",
+          ],
+        },
+        "FunctionName": Object {
+          "Ref": "fanmessage09287453",
+        },
+        "StartingPosition": "LATEST",
+      },
+      "Type": "AWS::Lambda::EventSourceMapping",
+    },
+    "fanmessageServiceRoleA9BBFC44": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "fanmessageServiceRoleDefaultPolicy9AF4EAEE": Object {
+      "Properties": Object {
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "dynamodb:ListStreams",
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+            Object {
+              "Action": Array [
+                "dynamodb:DescribeStream",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+              ],
+              "Effect": "Allow",
+              "Resource": Object {
+                "Fn::GetAtt": Array [
+                  "messagesTable7489632E",
+                  "StreamArn",
+                ],
+              },
+            },
+            Object {
+              "Action": Array [
+                "dynamodb:BatchGetItem",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:ConditionCheckItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+              ],
+              "Effect": "Allow",
+              "Resource": Array [
+                Object {
+                  "Fn::GetAtt": Array [
+                    "connectionsTable7418640E",
+                    "Arn",
+                  ],
+                },
+                Object {
+                  "Ref": "AWS::NoValue",
+                },
+              ],
+            },
+            Object {
+              "Action": "execute-api:ManageConnections",
+              "Effect": "Allow",
+              "Resource": Object {
+                "Fn::Join": Array [
+                  "",
+                  Array [
+                    "arn:aws:execute-api:",
+                    Object {
+                      "Ref": "AWS::Region",
+                    },
+                    ":",
+                    Object {
+                      "Ref": "AWS::AccountId",
+                    },
+                    ":",
+                    Object {
+                      "Ref": "socketgatewayBC596BF8",
+                    },
+                    "/*",
+                  ],
+                ],
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "fanmessageServiceRoleDefaultPolicy9AF4EAEE",
+        "Roles": Array [
+          Object {
+            "Ref": "fanmessageServiceRoleA9BBFC44",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "message65A4EB15": Object {
+      "DependsOn": Array [
+        "messageServiceRoleDefaultPolicy3F0DD0C8",
+        "messageServiceRole7AA22539",
+      ],
+      "Properties": Object {
+        "Code": Object {
+          "S3Bucket": Object {
+            "Ref": "AssetParameters4d9dbfbd7b0759d9ffdb8990f1bbd48a1901a8f29be3db266217d2a3ad72d669S3Bucket98333ACA",
+          },
+          "S3Key": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                Object {
+                  "Fn::Select": Array [
+                    0,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameters4d9dbfbd7b0759d9ffdb8990f1bbd48a1901a8f29be3db266217d2a3ad72d669S3VersionKey0DA2E5A5",
+                        },
+                      ],
+                    },
+                  ],
+                },
+                Object {
+                  "Fn::Select": Array [
+                    1,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameters4d9dbfbd7b0759d9ffdb8990f1bbd48a1901a8f29be3db266217d2a3ad72d669S3VersionKey0DA2E5A5",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        },
+        "Environment": Object {
+          "Variables": Object {
+            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+            "TABLE_NAME": Object {
+              "Ref": "messagesTable7489632E",
+            },
+          },
+        },
+        "Handler": "index.handle",
+        "Role": Object {
+          "Fn::GetAtt": Array [
+            "messageServiceRole7AA22539",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs14.x",
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "messageServiceRole7AA22539": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "messageServiceRoleDefaultPolicy3F0DD0C8": Object {
+      "Properties": Object {
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": Array [
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+              ],
+              "Effect": "Allow",
+              "Resource": Array [
+                Object {
+                  "Fn::GetAtt": Array [
+                    "messagesTable7489632E",
+                    "Arn",
+                  ],
+                },
+                Object {
+                  "Ref": "AWS::NoValue",
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "messageServiceRoleDefaultPolicy3F0DD0C8",
+        "Roles": Array [
+          Object {
+            "Ref": "messageServiceRole7AA22539",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "messagesTable7489632E": Object {
+      "DeletionPolicy": "Delete",
+      "Properties": Object {
+        "AttributeDefinitions": Array [
+          Object {
+            "AttributeName": "connectionId",
+            "AttributeType": "S",
+          },
+          Object {
+            "AttributeName": "messageId",
+            "AttributeType": "S",
+          },
+        ],
+        "KeySchema": Array [
+          Object {
+            "AttributeName": "connectionId",
+            "KeyType": "HASH",
+          },
+          Object {
+            "AttributeName": "messageId",
+            "KeyType": "RANGE",
+          },
+        ],
+        "ProvisionedThroughput": Object {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5,
+        },
+        "StreamSpecification": Object {
+          "StreamViewType": "NEW_AND_OLD_IMAGES",
+        },
+        "TableName": "messagesTable",
+      },
+      "Type": "AWS::DynamoDB::Table",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "onconnect26852094": Object {
+      "DependsOn": Array [
+        "onconnectServiceRoleDefaultPolicy36B4D8AC",
+        "onconnectServiceRole16DBD624",
+      ],
+      "Properties": Object {
+        "Code": Object {
+          "S3Bucket": Object {
+            "Ref": "AssetParameters28e6c6a66c30e18f3ac1cb08b8183c5554b925c71ecf1faa90427bc0c4b6a30eS3BucketE35FF0CA",
+          },
+          "S3Key": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                Object {
+                  "Fn::Select": Array [
+                    0,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameters28e6c6a66c30e18f3ac1cb08b8183c5554b925c71ecf1faa90427bc0c4b6a30eS3VersionKeyB5774F3A",
+                        },
+                      ],
+                    },
+                  ],
+                },
+                Object {
+                  "Fn::Select": Array [
+                    1,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameters28e6c6a66c30e18f3ac1cb08b8183c5554b925c71ecf1faa90427bc0c4b6a30eS3VersionKeyB5774F3A",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        },
+        "Environment": Object {
+          "Variables": Object {
+            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+            "TABLE_NAME": Object {
+              "Ref": "connectionsTable7418640E",
+            },
+          },
+        },
+        "Handler": "index.handle",
+        "Role": Object {
+          "Fn::GetAtt": Array [
+            "onconnectServiceRole16DBD624",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs14.x",
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "onconnectServiceRole16DBD624": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "onconnectServiceRoleDefaultPolicy36B4D8AC": Object {
+      "Properties": Object {
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": Array [
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+              ],
+              "Effect": "Allow",
+              "Resource": Array [
+                Object {
+                  "Fn::GetAtt": Array [
+                    "connectionsTable7418640E",
+                    "Arn",
+                  ],
+                },
+                Object {
+                  "Ref": "AWS::NoValue",
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "onconnectServiceRoleDefaultPolicy36B4D8AC",
+        "Roles": Array [
+          Object {
+            "Ref": "onconnectServiceRole16DBD624",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "ondisconnect2175C08C": Object {
+      "DependsOn": Array [
+        "ondisconnectServiceRoleDefaultPolicy3C440125",
+        "ondisconnectServiceRole12DECBC1",
+      ],
+      "Properties": Object {
+        "Code": Object {
+          "S3Bucket": Object {
+            "Ref": "AssetParameterscd7c5ecac63c1a014f3be94a5385cedc5b64f59866a3650898bf3cba43eacd55S3BucketD4395DAD",
+          },
+          "S3Key": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                Object {
+                  "Fn::Select": Array [
+                    0,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameterscd7c5ecac63c1a014f3be94a5385cedc5b64f59866a3650898bf3cba43eacd55S3VersionKeyF166761D",
+                        },
+                      ],
+                    },
+                  ],
+                },
+                Object {
+                  "Fn::Select": Array [
+                    1,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameterscd7c5ecac63c1a014f3be94a5385cedc5b64f59866a3650898bf3cba43eacd55S3VersionKeyF166761D",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        },
+        "Environment": Object {
+          "Variables": Object {
+            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+            "TABLE_NAME": Object {
+              "Ref": "connectionsTable7418640E",
+            },
+          },
+        },
+        "Handler": "index.handle",
+        "Role": Object {
+          "Fn::GetAtt": Array [
+            "ondisconnectServiceRole12DECBC1",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs14.x",
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "ondisconnectServiceRole12DECBC1": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "ondisconnectServiceRoleDefaultPolicy3C440125": Object {
+      "Properties": Object {
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": Array [
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+              ],
+              "Effect": "Allow",
+              "Resource": Array [
+                Object {
+                  "Fn::GetAtt": Array [
+                    "connectionsTable7418640E",
+                    "Arn",
+                  ],
+                },
+                Object {
+                  "Ref": "AWS::NoValue",
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "ondisconnectServiceRoleDefaultPolicy3C440125",
+        "Roles": Array [
+          Object {
+            "Ref": "ondisconnectServiceRole12DECBC1",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "socketgatewayBC596BF8": Object {
+      "Properties": Object {
+        "Name": "socket-gateway",
+        "ProtocolType": "WEBSOCKET",
+        "RouteSelectionExpression": "$request.body.action",
+      },
+      "Type": "AWS::ApiGatewayV2::Api",
+    },
+    "socketgatewayconnectRoute3AF18A91": Object {
+      "Properties": Object {
+        "ApiId": Object {
+          "Ref": "socketgatewayBC596BF8",
+        },
+        "RouteKey": "$connect",
+        "Target": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "integrations/",
+              Object {
+                "Ref": "socketgatewayconnectRouteWebSocketIntegration741fa957da4df38670e120b0e1039a6062BF1BA4",
+              },
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::ApiGatewayV2::Route",
+    },
+    "socketgatewayconnectRouteMyTestStacksocketgatewayconnectRoute893768DEPermission40349062": Object {
+      "Properties": Object {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": Object {
+          "Fn::GetAtt": Array [
+            "onconnect26852094",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "arn:",
+              Object {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              Object {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              Object {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              Object {
+                "Ref": "socketgatewayBC596BF8",
+              },
+              "/*/*$connect",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "socketgatewayconnectRouteWebSocketIntegration741fa957da4df38670e120b0e1039a6062BF1BA4": Object {
+      "Properties": Object {
+        "ApiId": Object {
+          "Ref": "socketgatewayBC596BF8",
+        },
+        "IntegrationType": "AWS_PROXY",
+        "IntegrationUri": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "arn:",
+              Object {
+                "Ref": "AWS::Partition",
+              },
+              ":apigateway:",
+              Object {
+                "Ref": "AWS::Region",
+              },
+              ":lambda:path/2015-03-31/functions/",
+              Object {
+                "Fn::GetAtt": Array [
+                  "onconnect26852094",
+                  "Arn",
+                ],
+              },
+              "/invocations",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::ApiGatewayV2::Integration",
+    },
+    "socketgatewaydisconnectRoute64CDB9B6": Object {
+      "Properties": Object {
+        "ApiId": Object {
+          "Ref": "socketgatewayBC596BF8",
+        },
+        "RouteKey": "$disconnect",
+        "Target": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "integrations/",
+              Object {
+                "Ref": "socketgatewaydisconnectRouteWebSocketIntegrationb8a41bd3b3c435a224b38a824f8bc7d48CB60CA9",
+              },
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::ApiGatewayV2::Route",
+    },
+    "socketgatewaydisconnectRouteMyTestStacksocketgatewaydisconnectRoute5A4F1EC4Permission1D2EE9EA": Object {
+      "Properties": Object {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": Object {
+          "Fn::GetAtt": Array [
+            "message65A4EB15",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "arn:",
+              Object {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              Object {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              Object {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              Object {
+                "Ref": "socketgatewayBC596BF8",
+              },
+              "/*/*$disconnect",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "socketgatewaydisconnectRouteWebSocketIntegrationb8a41bd3b3c435a224b38a824f8bc7d48CB60CA9": Object {
+      "Properties": Object {
+        "ApiId": Object {
+          "Ref": "socketgatewayBC596BF8",
+        },
+        "IntegrationType": "AWS_PROXY",
+        "IntegrationUri": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "arn:",
+              Object {
+                "Ref": "AWS::Partition",
+              },
+              ":apigateway:",
+              Object {
+                "Ref": "AWS::Region",
+              },
+              ":lambda:path/2015-03-31/functions/",
+              Object {
+                "Fn::GetAtt": Array [
+                  "message65A4EB15",
+                  "Arn",
+                ],
+              },
+              "/invocations",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::ApiGatewayV2::Integration",
+    },
+    "socketgatewaymessageRouteB2D10F97": Object {
+      "Properties": Object {
+        "ApiId": Object {
+          "Ref": "socketgatewayBC596BF8",
+        },
+        "RouteKey": "message",
+        "Target": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "integrations/",
+              Object {
+                "Ref": "socketgatewaydisconnectRouteWebSocketIntegrationb8a41bd3b3c435a224b38a824f8bc7d48CB60CA9",
+              },
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::ApiGatewayV2::Route",
+    },
+    "socketgatewaymessageRouteMyTestStacksocketgatewaymessageRoute77BC3B50Permission93BD1746": Object {
+      "Properties": Object {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": Object {
+          "Fn::GetAtt": Array [
+            "message65A4EB15",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "arn:",
+              Object {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              Object {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              Object {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              Object {
+                "Ref": "socketgatewayBC596BF8",
+              },
+              "/*/*message",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+  },
+}
+`;

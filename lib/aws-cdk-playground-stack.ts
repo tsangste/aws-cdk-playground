@@ -32,7 +32,7 @@ export class AwsCdkPlaygroundStack extends cdk.Stack {
       handler: 'handle',
       entry: path.join(__dirname, `/../src/on-connect/index.ts`),
       environment: {
-        TABLE_NAME: 'connectionsTable'
+        TABLE_NAME: connections.tableName
       }
     })
 
@@ -43,7 +43,7 @@ export class AwsCdkPlaygroundStack extends cdk.Stack {
       handler: 'handle',
       entry: path.join(__dirname, `/../src/on-disconnect/index.ts`),
       environment: {
-        TABLE_NAME: 'connectionsTable'
+        TABLE_NAME: connections.tableName
       }
     })
 
@@ -54,7 +54,7 @@ export class AwsCdkPlaygroundStack extends cdk.Stack {
       handler: 'handle',
       entry: path.join(__dirname, `/../src/send-message/index.ts`),
       environment: {
-        TABLE_NAME: 'messagesTable'
+        TABLE_NAME: messages.tableName
       }
     })
 
@@ -80,7 +80,7 @@ export class AwsCdkPlaygroundStack extends cdk.Stack {
       handler: 'handle',
       entry: path.join(__dirname, `/../src/fan-message/index.ts`),
       environment: {
-        TABLE_NAME: 'connectionsTable'
+        TABLE_NAME: connections.tableName
       }
     })
 
