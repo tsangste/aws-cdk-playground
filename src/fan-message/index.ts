@@ -30,7 +30,16 @@ export async function handle(event: DynamoDBStreamEvent) {
 
         const model = AWS.DynamoDB.Converter.unmarshall(newImage)
 
-        await apigwManagementApi.postToConnection({ ConnectionId: connectionId, Data: model.message }).promise()
+        try {
+          await apigwManagementApi.postToConnection({ ConnectionId: connectionId, Data: model.message }).promise()
+        } catch (e) {
+          if (e.statusCode === 410) {
+            console.log(`Found stale connection, deleting ${connectionId}`);
+            await ddb.delete({ TableName: tableName, Key: { connectionId } }).promise()
+          } else {
+            throw e
+          }
+        }
       }
     })
 
