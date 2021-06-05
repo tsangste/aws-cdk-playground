@@ -87,7 +87,7 @@ export class AwsCdkPlaygroundStack extends cdk.Stack {
       startingPosition: lambda.StartingPosition.LATEST
     }))
 
-    connections.grantReadData(fanMessage)
+    connections.grantReadWriteData(fanMessage)
 
     fanMessage.addToRolePolicy(new iam.PolicyStatement(({
       effect: iam.Effect.ALLOW,
