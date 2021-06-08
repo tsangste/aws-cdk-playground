@@ -1,9 +1,9 @@
-import { DynamoDBStreamEvent } from 'aws-lambda'
 import * as AWS from 'aws-sdk'
-
-const ddb = new AWS.DynamoDB.DocumentClient({ apiVersion: '2012-08-10', region: process.env.AWS_REGION })
+import { DynamoDBStreamEvent } from 'aws-lambda'
 
 export async function handle(event: DynamoDBStreamEvent) {
+  const ddb = new AWS.DynamoDB.DocumentClient({ apiVersion: '2012-08-10', region: process.env.AWS_REGION })
+
   const tableName = process.env.TABLE_NAME
   if (!tableName) {
     throw new Error('Table Name not Set')
